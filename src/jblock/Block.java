@@ -18,7 +18,7 @@ public class Block {
 		this.hash = calculateHash(); //Making sure we do this after we set the other values.
 	}
 	
-	//Calculate new hash based on block's contents
+	//Calculates new hash based upon block contents
 	public String calculateHash() {
 		String calculatedhash = StringUtil.applySha256( 
 				previousHash +
@@ -29,7 +29,7 @@ public class Block {
 		return calculatedhash;
 	}
 	
-	//Mines blocks based upon difficulty (higher the more time it takes)
+	//Mines blocks based upon difficulty (higher difficulty = more time it takes)
 	public void mineBlock(int difficulty) {
 		String target = new String(new char[difficulty]).replace('\0', '0'); //Create a string with difficulty * "0" 
 		while(!hash.substring( 0, difficulty).equals(target)) {
