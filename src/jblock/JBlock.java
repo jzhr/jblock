@@ -10,15 +10,15 @@ public class JBlock {
 	public static void main(String[] args) {	
 		//add our blocks to the blockchain ArrayList:
 		
-		blockchain.add(new Block("Hi im the first block", "0"));
+		blockchain.add(new Block("Hi I'm the first block", "0"));
 		System.out.println("Trying to Mine block 1... "); //trying to add to the chain (mining)
 		blockchain.get(0).mineBlock(difficulty);
 		
-		blockchain.add(new Block("Yo im the second block",blockchain.get(blockchain.size()-1).hash));
+		blockchain.add(new Block("I'm the second block!",blockchain.get(blockchain.size()-1).hash));
 		System.out.println("Trying to Mine block 2... ");
 		blockchain.get(1).mineBlock(difficulty);
 		
-		blockchain.add(new Block("Hey im the third block",blockchain.get(blockchain.size()-1).hash));
+		blockchain.add(new Block("I'm the third block!",blockchain.get(blockchain.size()-1).hash));
 		System.out.println("Trying to Mine block 3... ");
 		blockchain.get(2).mineBlock(difficulty);	
 		
